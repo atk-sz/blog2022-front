@@ -64,7 +64,12 @@ const Header = () => {
         </li>
       </ul>
       <div id="mySidenav" className="sidenav">
-        <p href="javascript:void(0)" className="closebtn" onclick="closeNav()">
+        <p
+          className="closebtn"
+          onClick={() => {
+            console.log("closed");
+          }}
+        >
           &times;
         </p>
         <p className="to-close-nav" href="#home" className="home-logo">
