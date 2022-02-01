@@ -1,0 +1,149 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky {
+  /* background: rgb(75, 68, 68); */
+  background-color: #555;
+  padding: 5px 100px;
+  opacity: 0.9;
+  box-shadow: 0 5px 20px rgba(255, 3, 3, 0.05);
+}
+.navigation li p,
+.home-logo {
+  cursor: pointer;
+}
+header.sticky .home-logo,
+header.sticky .navigation li p {
+  color: #fff;
+  /* color: #111; */
+}
+header .home-logo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header .home-logo:hover,
+header .navigation li p:hover {
+  /* color: #ffee00; */
+  color: #000;
+}
+header .navigation {
+  position: relative;
+  display: flex;
+}
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+header .navigation li p {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+header .znav div {
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+header .znav {
+  width: 30px;
+  display: block;
+  margin: 1em 0 0 1em;
+}
+header .znav .one-bar {
+  width: 30px;
+}
+header .znav .two-bar {
+  width: 20px;
+}
+header .znav:hover div {
+  min-width: 30px;
+}
+header .znav .three-bar {
+  width: 25px;
+}
+header nav {
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  header .navigation,
+  header .home-logo {
+    display: none;
+  }
+  header {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  header .znav {
+    display: none;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav p:nth-child(2) {
+  font-weight: bolder;
+}
+
+.sidenav p:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#nav-button {
+  filter: invert(1);
+}
+/* ------------------- */
+@media screen and (min-width: 769px) {
+  .sidenav {
+    display: none;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav p {
+    font-size: 18px;
+  }
+}

@@ -1,25 +1,54 @@
-import logo from './logo.svg';
+import { Main } from "./views";
+import { Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
 import './App.css';
 
-function App() {
+const App = () => {
+  // const dispatch = useDispatch();
+  // to check firebase auth state
+
+  // useEffect(() => {
+  //   // setInterval(async () => {
+  //   //   console.log(await (await KeepAliveServer()).data);
+  //   // }, [3000]);
+  //   const unsubscribe = auth.onAuthStateChanged(async (user) => {
+  //     if (user) {
+  //       const idTokenResult = await user.getIdTokenResult();
+  //       currentUser(idTokenResult.token)
+  //         .then((res) => {
+  //           dispatch({
+  //             type: "LOGGED_IN_USER",
+  //             payload: {
+  //               name: res.data.name,
+  //               email: res.data.email,
+  //               role: res.data.role,
+  //               token: idTokenResult.token,
+  //               _id: res.data._id,
+  //             },
+  //           });
+  //         })
+  //         .catch((err) => console.log(err));
+  //     }
+  //   });
+
+  //   // cleanup
+  //   return () => unsubscribe();
+  // }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+    // fallback={
+    //   <div style={{ position: "fixed", left: "45vw", top: "45vh" }}>
+    //     __ PM __
+    //   </div>
+    // }
+    >
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Suspense>
   );
-}
+};
+
 
 export default App;
