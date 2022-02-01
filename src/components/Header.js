@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/Header.css";
 
 const Header = () => {
@@ -19,21 +20,47 @@ const Header = () => {
         <div className="two-bar"></div>
         <div className="three-bar"></div>
       </nav>
-      <p href="#home" className="home-logo">
-        Home
-      </p>
+      <Link to="/" style={{ textDecoration: "none" }} className="nav-link">
+        <p href="#home" className="home-logo">
+          Home
+        </p>
+      </Link>
       <ul className="navigation">
         <li>
-          <p href="#about">About me</p>
+          <Link
+            to="/about"
+            style={{ textDecoration: "none" }}
+            className="nav-link"
+          >
+            <p>About me</p>
+          </Link>
         </li>
         <li>
-          <p href="#mywork">My Work</p>
+          <Link
+            to="/my-work"
+            style={{ textDecoration: "none" }}
+            className="nav-link"
+          >
+            <p>My Work</p>
+          </Link>
         </li>
         <li>
-          <p href="#media">Social Media</p>
+          <Link
+            to="/social-media"
+            style={{ textDecoration: "none" }}
+            className="nav-link"
+          >
+            <p>Social Media</p>
+          </Link>
         </li>
         <li>
-          <p href="#feedback">Feedback</p>
+          <Link
+            to="/feedback"
+            style={{ textDecoration: "none" }}
+            className="nav-link"
+          >
+            <p>Feedback</p>
+          </Link>
         </li>
       </ul>
       <div id="mySidenav" className="sidenav">

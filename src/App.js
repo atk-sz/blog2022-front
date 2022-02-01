@@ -1,7 +1,7 @@
-import { Main } from "./views";
+import { About, Feedback, Home, MyWork, SocialMedia } from "./views";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   // const dispatch = useDispatch();
@@ -44,11 +44,14 @@ const App = () => {
     // }
     >
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/my-work" element={<MyWork />} />
+        <Route path="/social-media" element={<SocialMedia />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </Suspense>
   );
 };
-
 
 export default App;
