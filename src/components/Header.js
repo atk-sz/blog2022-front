@@ -72,7 +72,7 @@ const Header = () => {
         >
           &times;
         </p>
-        <p className="to-close-nav" href="#home" className="home-logo">
+        <p className="to-close-nav home-logo" href="#home">
           Home
         </p>
         <p className="to-close-nav" href="#about">
