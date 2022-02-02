@@ -1,4 +1,18 @@
 .about {
-  margin: 10vh 12vw;
-  height: 65vh;
+  position: relative;
+  background: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/assests/HiriyurDamC.jpg");
+  /* background-image: url("/../docs//BlogPics/descbg.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(0.10);
+  /* background-color: rgba(115, 216, 247, 0.486); */
+  /* background-color: rgba(156, 250, 168, 0.486); */
+  background-color: rgba(131, 243, 146, 0.486);
+  background-blend-mode: multiply;
 }
