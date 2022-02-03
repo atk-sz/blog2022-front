@@ -6,12 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("/src/assests/HiriyurDamC.jpg"); */
   background-image: url("/src/assests/BG.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-color: rgb(255, 0, 13);  */
-  /* background-blend-mode: multiply; */
+  background-color: rgba(126, 107, 108, 0.171);
+  background-blend-mode: multiply;
 }
 .home .content .name-tag,
 .home .content .bio-tag {
