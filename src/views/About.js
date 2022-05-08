@@ -8,12 +8,12 @@ const About = () => {
   return (
     <div>
       <Header />
-      <section className="about">
+      {/* <section className="about"> */}
         {/* <div className="pic">
           <img src={introPic} alt="" />
         </div>
         <div className="intro"></div> */}
-      </section>
+      {/* </section> */}
     </div>
   );
 };

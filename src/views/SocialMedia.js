@@ -7,7 +7,8 @@ const SocialMedia = () => {
     <div>
       <Header />
       <section className="social-media">
-        <h1>My Work</h1>
+        <h1>Follow me on</h1>
+        <h1>UnderContruction</h1>
       </section>
     </div>
   );
