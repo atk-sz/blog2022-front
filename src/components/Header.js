@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/Header.css";
 
 const Header = () => {
+
+  const openNav = () => {
+    document.getElementById("mySidenav").style.width = "250px";
+  };
+  const closeNav = () => {
+    document.getElementById("mySidenav").style.width = "0";
+  };
+
   return (
     <header
       style={{
         maxHeight: "50px",
       }}
     >
-      <nav
-        id="nav-button"
-        className="znav"
-        onClick={() => {
-          console.log("clicked");
-        }}
-      >
+      <nav id="nav-button" className="znav" onClick={openNav}>
         <div className="one-bar"></div>
         <div className="two-bar"></div>
         <div className="three-bar"></div>
@@ -64,12 +66,7 @@ const Header = () => {
         </li>
       </ul>
       <div id="mySidenav" className="sidenav">
-        <p
-          className="closebtn"
-          onClick={() => {
-            console.log("closed");
-          }}
-        >
+        <p className="closebtn" onClick={closeNav}>
           &times;
         </p>
         <p className="to-close-nav home-logo" href="#home">
