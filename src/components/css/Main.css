@@ -1,4 +1,4 @@
-.home .content {
+.main .content {
   position: relative;
   background: fixed;
   width: 100%;
@@ -12,18 +12,18 @@
   background-color: rgba(126, 107, 108, 0.171);
   background-blend-mode: multiply;
 }
-.home .content .name-tag,
-.home .content .bio-tag {
+.main .content .name-tag,
+.main .content .bio-tag {
   position: absolute;
   width: 100%;
 }
-.home .content .name-tag {
+.main .content .name-tag {
   top: 40%;
 }
-.home .content .bio-tag {
+.main .content .bio-tag {
   top: 55%;
 }
-.home .content h1 {
+.main .content h1 {
   color: white;
   display: block;
   letter-spacing: 17px;
@@ -34,7 +34,7 @@
   font-weight: 100;
   text-transform: uppercase;
 }
-.home .content h5 {
+.main .content h5 {
   color: white;
   text-align: center;
   letter-spacing: 15px;
@@ -45,21 +45,21 @@
   display: block;
 }
 @media screen and (max-width: 513px) {
-  .home .content h1 {
+  .main .content h1 {
     font-size: 50px;
     letter-spacing: 9px;
   }
-  .home .content h5 {
+  .main .content h5 {
     font-size: 13px;
     letter-spacing: 7px;
     font-weight: 600;
   }
-  .home .content {
+  .main .content {
     background-image: url(/src/assests/BG2.jpg);
   }
 }
 @media screen and (min-width: 514px) and (max-width: 768px) {
-  .home .content {
+  .main .content {
     background-image: url(/src/assests/BG1.jpg);
   }
 }
