@@ -1,4 +1,4 @@
-import { Home } from "./views";
+import { About, Home } from "./views";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import "./App.css";
@@ -15,6 +15,10 @@ const App = () => {
     >
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/my-work" element={<About />} />
+        <Route path="/social-media" element={<About />} />
+        <Route path="/feedback" element={<About />} />
       </Routes>
     </Suspense>
   );
