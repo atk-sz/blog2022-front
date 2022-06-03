@@ -1,0 +1,22 @@
+#about {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    max-height: 500px;
+    position: relative;
+}
+
+#about .about-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-left .about-left-bio {
+    text-align: justify;
+}
+
+#about .about-right {
+    max-height: 100%;
+}
