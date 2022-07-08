@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./css/Header.css";
 
 const Header = () => {
-
   const openNav = () => {
     document.getElementById("mySidenav").style.width = "250px";
   };
@@ -15,6 +14,7 @@ const Header = () => {
     <header
       style={{
         maxHeight: "50px",
+        marginTop: "10px",
       }}
     >
       <nav id="nav-button" className="znav" onClick={openNav}>

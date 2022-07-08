@@ -1,0 +1,35 @@
+.about-body {
+    margin: 10vh;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.about-body .about-content {
+    margin: auto;
+    padding-right: 30px;
+    flex: 3;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.about-body .about-content * {
+    font-family: 'Edu SA Beginner', cursive;
+    margin: auto;
+}
+
+.about-body .about-content .friends-em {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.about-body .about-img-div {
+    margin: auto;
+    position: relative;
+    flex: 2;
+}
+
+.about-body .about-img-div .about-img {
+    width: 100%;
+}
