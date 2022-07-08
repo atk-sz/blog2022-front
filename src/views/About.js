@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/About.css";
 import { Header } from "../components";
-import "../assests/svgs/about.svg";
 import AboutLogo from "../assests/svgs/about.svg";
-// import AboutSVG from "../assests/svgs/AboutSVG";
 
 const About = () => {
   let [age, setAge] = useState(0);

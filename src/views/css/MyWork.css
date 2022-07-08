@@ -1,4 +1,61 @@
-.my-work {
-    margin: 10vh 12vw;
-    height: 65vh;
-  }
+.work-body {
+  margin: 10vh;
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.work-boby-top {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.work-boby-top .work-content {
+  margin: auto;
+  padding-left: 30px;
+  flex: 3;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.work-boby-top .work-content * {
+  font-family: 'Edu SA Beginner', cursive;
+  margin: auto;
+  text-align: start;
+}
+
+.work-boby-top .work-content h2 {
+  font-size: 34px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.work-boby-top .work-content .role-bold {
+  color: white;
+}
+
+.job-link {
+  text-decoration: none;
+  color: rgb(209, 49, 49);
+  text-decoration: underline;
+}
+
+.job-link:hover {
+  color: rgb(255, 255, 255);
+}
+
+.work-highlight {
+  text-decoration: underline;
+}
+
+.work-boby-top .work-img-div {
+  margin: auto;
+  position: relative;
+  flex: 2;
+}
+
+.work-boby-top .work-img-div .work-img {
+  width: 100%;
+}
