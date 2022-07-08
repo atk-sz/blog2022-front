@@ -1,24 +1,21 @@
-import { About, Home } from "./views";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
+import { lazily } from "react-lazily";
 import "./App.css";
 
-const App = () => {
+const { Home, About, MyWork, SocialMedia, Feedback } = lazily(() =>
+  import("./views")
+);
 
+const App = () => {
   return (
-    <Suspense
-      fallback={
-        <div style={{ position: "fixed", left: "45vw", top: "45vh" }}>
-          __ PM __
-        </div>
-      }
-    >
+    <Suspense fallback={<div className="col text-center p-5 h1">Zloading</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/my-work" element={<About />} />
-        <Route path="/social-media" element={<About />} />
-        <Route path="/feedback" element={<About />} />
+        <Route path="/my-work" element={<MyWork />} />
+        <Route path="/social-media" element={<SocialMedia />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </Suspense>
   );
