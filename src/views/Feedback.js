@@ -29,7 +29,7 @@ const Feedback = () => {
         }, 2000);
       })
       .catch((err) => {
-        console.log("err");
+        // console.log("err");
         console.log(err);
         setMailDisable(false);
         setMailSuccess(false);
@@ -44,7 +44,6 @@ const Feedback = () => {
     <div className="feedback">
       <Header />
       <div className="feedback-body">
-        <h1>Feedback...</h1>
         <div className="feed">
           <div className="feed-form">
             <form onSubmit={handleSendMail} className="form-email">
@@ -89,7 +88,6 @@ const Feedback = () => {
             </form>
           </div>
         </div>
-        <h1>UnderContruction</h1>
       </div>
     </div>
   );
