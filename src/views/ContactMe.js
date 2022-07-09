@@ -49,6 +49,7 @@ const ContactMe = () => {
                 <AiOutlineTwitter id="tw-icon" />
               </span>
             </div>
+            <button id="resume-btn">See my resume</button>
           </div>
         </div>
       </div>

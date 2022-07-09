@@ -116,3 +116,21 @@
   background-color: white;
   color: #52A2F3;
 }
+
+#resume-btn {
+  border: none;
+  box-sizing: border-box;
+  margin: 30px;
+  padding: 5px 30px;
+  font-weight: 600;
+  color: #b9399e;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: .4s;
+}
+
+#resume-btn:hover {
+  background-color: #AE7BA3;
+  border: 1px solid white;
+  color: rgb(255, 255, 255);
+}
