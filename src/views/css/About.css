@@ -1,8 +1,7 @@
 .about-body {
-    margin: 10vh;
+    margin: 25vh 10vw auto 10vw;
     display: flex;
     justify-content: space-between;
-    height: 80vh;
 }
 
 .about-body .about-content {

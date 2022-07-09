@@ -10,47 +10,42 @@ header {
   align-items: center;
   transition: 0.5s;
 }
-header.sticky {
-  /* background: rgb(75, 68, 68); */
-  background-color: #555;
-  padding: 5px 100px;
-  opacity: 0.9;
-  box-shadow: 0 5px 20px rgba(255, 3, 3, 0.05);
-}
+
 .navigation li p,
 .home-logo {
   cursor: pointer;
 }
-header.sticky .home-logo,
-header.sticky .navigation li p {
-  color: #fff;
-  /* color: #111; */
-}
+
 header .home-logo {
   color: #ffffff;
   font-weight: 500;
   font-size: 2em;
   text-decoration: none;
 }
-header .home-logo:hover,
-header .navigation li p:hover {
-  /* color: #ffee00; */
-  color: #000;
-}
-header .navigation {
-  position: relative;
-  display: flex;
-}
-header .navigation li {
-  list-style: none;
-  margin-left: 30px;
-  padding-top: 20px;
-}
+
 header .navigation li p {
   text-decoration: none;
   color: #fff;
   font-weight: 400;
 }
+
+header .home-logo:hover,
+header .navigation li p:hover {
+  color: #000;
+  /* background-color: #e2c5c567; */
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
 header .znav div {
   height: 4px;
   background-color: white;
@@ -58,35 +53,45 @@ header .znav div {
   border-radius: 25px;
   transition: 0.3s;
 }
+
 header .znav {
   width: 30px;
   display: block;
   margin: 1em 0 0 1em;
 }
+
 header .znav .one-bar {
   width: 30px;
 }
+
 header .znav .two-bar {
   width: 20px;
 }
+
 header .znav:hover div {
   min-width: 30px;
 }
+
 header .znav .three-bar {
   width: 25px;
 }
+
 header nav {
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
+
   header .navigation,
   header .home-logo {
     display: none;
   }
+
   header {
     padding: 0;
   }
 }
+
 @media screen and (min-width: 769px) {
   header .znav {
     display: none;
@@ -130,19 +135,23 @@ header nav {
   font-size: 36px;
   margin-left: 50px;
 }
+
 #nav-button {
   filter: invert(1);
 }
+
 /* ------------------- */
 @media screen and (min-width: 769px) {
   .sidenav {
     display: none;
   }
 }
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav p {
     font-size: 18px;
   }

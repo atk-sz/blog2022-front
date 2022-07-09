@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { lazily } from "react-lazily";
 import "./App.css";
 
-const { Home, About, MyWork, SocialMedia, Feedback } = lazily(() =>
+const { Home, About, MyWork, ContactMe, Feedback } = lazily(() =>
   import("./views")
 );
 
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/my-work" element={<MyWork />} />
-        <Route path="/social-media" element={<SocialMedia />} />
+        <Route path="/contact-me" element={<ContactMe />} />
         <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </Suspense>

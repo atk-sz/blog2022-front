@@ -34,7 +34,7 @@ const Header = () => {
             style={{ textDecoration: "none" }}
             className="nav-link"
           >
-            <p>About me</p>
+            <p>About Me</p>
           </Link>
         </li>
         <li>
@@ -48,11 +48,11 @@ const Header = () => {
         </li>
         <li>
           <Link
-            to="/social-media"
+            to="/contact-me"
             style={{ textDecoration: "none" }}
             className="nav-link"
           >
-            <p>Social Media</p>
+            <p>Contact Me</p>
           </Link>
         </li>
         <li>

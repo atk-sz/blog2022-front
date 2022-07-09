@@ -1,0 +1,118 @@
+.contact-body {
+  margin: 10vh 0 5vh 0;
+}
+
+.contact-boby-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-boby-top .contact-content {
+  margin: auto;
+  padding-left: 30px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.contact-boby-top .contact-content * {
+  font-family: 'Edu SA Beginner', cursive;
+  margin: auto;
+  text-align: start;
+}
+
+.contact-boby-top .contact-img-div {
+  position: relative;
+  margin: 3vh 7vw;
+  max-width: 26%;
+  max-height: 26%;
+  border: 6px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contact-boby-top .contact-img-div .contact-img {
+  width: 100%;
+}
+
+.contact-content .social_media .social-media-icon {
+  margin: auto 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 53px;
+}
+
+.contact-content .social_media .social-media-icon * {
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.contact-content .social_media .social-media-icon #gmail-icon {
+  color: white;
+  background-color: #E74335;
+}
+
+.contact-content .social_media .social-media-icon #whatsapp-icon {
+  color: white;
+  background-color: #63CE49;
+}
+
+.contact-content .social_media .social-media-icon #insta-icon {
+  color: white;
+  background-color: #E7495D;
+}
+
+.contact-content .social_media .social-media-icon #fb-icon {
+  color: white;
+  background-color: #4867AA;
+}
+
+.contact-content .social_media .social-media-icon #gt-icon {
+  color: white;
+  background-color: #1B1F23;
+}
+
+.contact-content .social_media .social-media-icon #in-icon {
+  color: white;
+  background-color: #3B77B5;
+}
+
+.contact-content .social_media .social-media-icon #tw-icon {
+  color: white;
+  background-color: #52A2F3;
+}
+
+.contact-content .social_media .social-media-icon #gmail-icon:hover {
+  background-color: white;
+  color: #E74335;
+}
+
+.contact-content .social_media .social-media-icon #whatsapp-icon:hover {
+  background-color: white;
+  color: #63CE49;
+}
+
+.contact-content .social_media .social-media-icon #insta-icon:hover {
+  background-color: white;
+  color: #E7495D;
+}
+
+.contact-content .social_media .social-media-icon #fb-icon:hover {
+  background-color: white;
+  color: #4867AA;
+}
+
+.contact-content .social_media .social-media-icon #gt-icon:hover {
+  background-color: white;
+  color: #1B1F23;
+}
+
+.contact-content .social_media .social-media-icon #in-icon:hover {
+  background-color: white;
+  color: #3B77B5;
+}
+
+.contact-content .social_media .social-media-icon #tw-icon:hover {
+  background-color: white;
+  color: #52A2F3;
+}

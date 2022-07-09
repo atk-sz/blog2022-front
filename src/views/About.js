@@ -12,20 +12,10 @@ const About = () => {
 
   const ageCal = () => {
     var dob = new Date("10/22/1998");
-    //calculate month difference from current date in time
-    // var month_diff = Date.now("10/22/2024") - dob.getTime();
     var month_diff = new Date("10/21/2022") - dob.getTime();
-
-    //convert the calculated difference in date format
     var age_dt = new Date(month_diff);
-
-    //extract year from date
     var year = age_dt.getUTCFullYear();
-
-    //now calculate the age of the user
     var age = Math.abs(year - 1970);
-
-    //display the calculated age
     setAge(age);
   };
 
@@ -34,7 +24,6 @@ const About = () => {
       <Header />
       <div className="about-body">
         <div className="about-content">
-          {/* Hello to all my readers, iam a 23 year old software engineer from Bangalore.  */}
           <p>
             Hello to all my readers, I am from Bangalore, {age} years old,
             Software Engineer, Poet, Social Worker, Counselor and a{" "}

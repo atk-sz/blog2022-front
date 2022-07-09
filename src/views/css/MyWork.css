@@ -1,14 +1,10 @@
 .work-body {
-  margin: 10vh;
-  display: flex;
-  justify-content: space-between;
-  height: 80vh;
+  margin: 15vh;
 }
 
 .work-boby-top {
   display: flex;
   justify-content: space-between;
-
 }
 
 .work-boby-top .work-content {

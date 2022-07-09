@@ -10,7 +10,7 @@ const MyWork = () => {
       <div className="work-body">
         <div className="work-boby-top">
           <div className="work-img-div">
-            <img className="work-img" src={WorkLogo} alt="About Logo" />
+            <img className="work-img" src={WorkLogo} alt="Work Logo" />
           </div>
           <div className="work-content">
             <h2>Professional Experience</h2>
@@ -53,10 +53,6 @@ const MyWork = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="my-work-body">
-        <h1>My Work</h1>
-        <h1>UnderContruction</h1>
       </div>
     </div>
   );
