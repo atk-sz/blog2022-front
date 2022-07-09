@@ -23,7 +23,7 @@ const ContactMe = () => {
             <img className="contact-img" src={ContactLogo} alt="Contact Logo" />
           </div>
           <div className="contact-content">
-            <h1>Connect me on:</h1>
+            {/* <h1>Connect me on:</h1> */}
             <div className="social_media">
               <span className="social-media-icon">
                 <AiFillGoogleCircle id="gmail-icon" />

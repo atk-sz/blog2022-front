@@ -1,4 +1,68 @@
 .feedback {
-    margin: 10vh 12vw;
-    height: 65vh;
-  }
+  margin: 15vh 7vw;
+  height: 65vh;
+}
+
+.feedback-body .feed-form {
+  /* margin: 10% 25% 10% 25%; */
+  width: 100%;
+  max-width: 320px;
+}
+
+.feedback-body input,
+.feedback-body textarea,
+.feedback-body button {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+  width: 100%;
+  min-width: 300px;
+  display: block;
+  margin-bottom: 15px;
+  resize: none;
+  border: none;
+  font: inherit;
+  border-radius: 2%;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.feedback-body input {
+  height: 50px;
+}
+
+.feedback-body ::placeholder {
+  color: #112;
+  opacity: 0.5;
+}
+
+.feedback-body button {
+  background-color: #112;
+  color: #fff;
+}
+
+.feedback-body button:hover {
+  background-color: #123;
+}
+
+.feedback-body .onsubmit {
+  position: relative;
+  width: 100%;
+}
+
+.feedback-body .onsubmit h4 {
+  font-weight: 600;
+  position: absolute;
+  padding: 2px;
+  width: 100%;
+  color: rgba(17, 17, 34, 0.603);
+}
+
+.feedback-body .onsubmit h4#email-success {
+  background-color: rgba(80, 235, 49, 0.548);
+  transition: .2s;
+}
+
+.feedback-body .onsubmit h4#email-fail {
+  background-color: rgba(235, 49, 49, 0.548);
+  transition: .2s;
+}
