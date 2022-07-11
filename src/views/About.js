@@ -26,7 +26,7 @@ const About = () => {
         <div className="about-content">
           <p>
             Hello to all my readers, I am from Bangalore, {age} years old,
-            Software Engineer, Poet, Social Worker, Counselor and a{" "}
+            Software Engineer, Poet, Social Worker, Counselor, and a{" "}
             <em className="friends-em">
               F<span style={{ color: "red" }}>.</span>R
               <span style={{ color: "blue" }}>.</span>I
@@ -38,10 +38,10 @@ const About = () => {
             freak.
           </p>
           <p>
-            Fooo!! So, basically iam a developer by passion, i write poetry when
-            iam gloomy, iam a part time social worker and i like to help people
-            with thier psychological issues and last but not the least iam a
-            crazy ass fan of The Show FRIENDS
+            Fooo!! So basically, I am a developer by passion, I write poetry
+            when I am gloomy, I am a part-time social worker and I like to help
+            people with their psychological issues and last but not least I am a
+            crazy-ass fan of The Show FRIENDS
           </p>
         </div>
         <div className="about-img-div">

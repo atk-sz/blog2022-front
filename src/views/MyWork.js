@@ -26,11 +26,11 @@ const MyWork = () => {
               >
                 WebCannon-Z
               </a>{" "}
-              for alomost a year. Mostly used{" "}
+              for almost a year. Mostly used{" "}
               <span className="work-highlight">MERN Stack</span> technology to
               work on real-time web applications and{" "}
               <span className="work-highlight">react native & expo</span> to
-              work on native applications. Applications such as ecommerce sites
+              work on native applications. Applications such as eCommerce sites
               and simple ERP apps.
             </p>
             <hr style={{ margin: "10px" }} />
@@ -45,9 +45,9 @@ const MyWork = () => {
               >
                 Hitachi India
               </a>{" "}
-              from Dec 2021. Here iam a part of{" "}
+              from Dec 2021. Here I am a part of{" "}
               <span className="work-highlight">FinTech Project</span> that helps
-              in detecting fraud transactions over POS machines. Working with
+              detect fraud transactions over POS machines. Working with
               technologies such as HDFS, Ambari Cluster, Spark, Scala, Hive &
               much more.
             </p>
