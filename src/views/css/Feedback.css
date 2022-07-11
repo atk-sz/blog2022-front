@@ -1,9 +1,27 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .feedback {
   margin: 20vh 7vw 15vh 7vw;
   height: 65vh;
 }
 
-.feedback-body .feed-form {
+.feedback-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-body textarea:focus,
+.feedback-body input:focus {
+  outline: none;
+}
+
+.feedback-body .feedback-form {
   /* margin: 10% 25% 10% 25%; */
   width: 100%;
   max-width: 320px;
@@ -65,4 +83,32 @@
 .feedback-body .onsubmit h4#email-fail {
   background-color: rgba(235, 49, 49, 0.548);
   transition: .2s;
+}
+
+.feedback-body .thank-you-div {
+  max-width: 400px;
+  position: relative;
+}
+
+/* .feedback-body .thank-you-div p {
+  margin-bottom: 0;
+} */
+
+.feedback-body .thank-you-div .upi-img {
+  max-width: 230px;
+}
+
+.card-payment-div .card-next-btn {
+  margin-bottom: 5px;
+}
+
+.card-logo {
+  float: right;
+  margin-top: 0;
+}
+
+.card-payment-from-div {
+  border: solid black 2px;
+  width: 322px;
+  height: 430px;
 }
