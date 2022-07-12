@@ -1,8 +1,18 @@
 import React from "react";
 import { useState } from "react";
-import { sendMail } from "../api/api";
-import { Header } from "../components";
+import { paymentIntent, sendMail } from "../api/api";
+import { Header, CheckoutForm } from "../components";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import "./css/Feedback.css";
+
+const stripePromise = loadStripe(
+  "pk_test_51JSxa3SJaRCuuRqyHvVOa3avYyZqFOO8uTadYNNUX4oUTd5HltOdxIr7Y4yPstcsXBD3Fip4nUPKgwyFIGHWEnMJ00rrvB2jbg"
+);
+
+// const stripePromise = loadStripe(
+//   "pk_live_51JSxa3SJaRCuuRqy28ps5iWYmM1ThF15anymzB1xqLwuipqbURxv8Bhj1yshu9vWwcCtpWIMkNn1WaDc5na2npaz00p8RqNrZK"
+// );
 
 const Feedback = () => {
   const initialValues = { name: "", email: "", message: "" };
@@ -13,16 +23,8 @@ const Feedback = () => {
   const [mailFail, setMailFail] = useState(false);
   const [mailDisable, setMailDisable] = useState(false);
   const [cardMode, setCardMode] = useState(false);
-
-  // const ref = useRef(null);
-  // const ref1 = useRef(null);
-
-  // useEffect(() => {
-  //   console.log("width", ref.current.offsetWidth);
-  //   // 322;
-  //   console.log("width", ref1.current.offsetHeight);
-  //   // 430;
-  // }, []);
+  const [loading, setLoading] = useState(false);
+  const [clientSecret, setClientSecret] = useState("");
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -43,7 +45,6 @@ const Feedback = () => {
         }, 2000);
       })
       .catch((err) => {
-        // console.log("err");
         console.log(err);
         setMailDisable(false);
         setMailSuccess(false);
@@ -61,8 +62,25 @@ const Feedback = () => {
 
   const handleAmountSub = (e) => {
     e.preventDefault();
+    setLoading(true);
     setCardMode(true);
-    console.log("Amout");
+    paymentIntent(values1)
+      .then((res) => {
+        setClientSecret(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
+
+  const appearance = {
+    theme: "stripe",
+  };
+  const options = {
+    clientSecret,
+    appearance,
   };
 
   return (
@@ -128,7 +146,22 @@ const Feedback = () => {
         </div>
         <div className="card-payment-div">
           {cardMode ? (
-            <div className="card-payment-from-div">Payment</div>
+            <div className="card-payment-from-div">
+              {loading ? (
+                <h1>loading...</h1>
+              ) : (
+                <div className="payment-body">
+                  {clientSecret && (
+                    <Elements options={options} stripe={stripePromise}>
+                      <CheckoutForm
+                        clientSecret={clientSecret}
+                        setClientSecret={setClientSecret}
+                      />
+                    </Elements>
+                  )}
+                </div>
+              )}
+            </div>
           ) : (
             <>
               <h4>You can can also donate via card</h4>

@@ -5,3 +5,12 @@ export const sendMail = async (values) => {
     values,
   });
 };
+
+export const paymentIntent = async (values) => {
+  return await axios.post(
+    `${process.env.REACT_APP_BACKEND_API}/create-payment-intent`,
+    {
+      values,
+    }
+  );
+};
