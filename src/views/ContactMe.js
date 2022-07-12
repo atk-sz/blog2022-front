@@ -6,6 +6,7 @@ import { FiFacebook } from "react-icons/fi";
 import { SiWhatsapp } from "react-icons/si";
 import { RiLinkedinFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import {
   AiFillGoogleCircle,
   AiOutlineInstagram,
@@ -87,7 +88,20 @@ const ContactMe = () => {
                 </a>
               </span>
             </div>
-            <button id="resume-btn">See my resume</button>
+            <a
+              href="https://drive.google.com/file/d/1FoYDjK4BZmxnyB00w0rKmpnfeyvCo_Rg/view"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <button id="resume-btn">See my resume</button>
+            </a>
+            <a
+              href="https://my-zblog.herokuapp.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <button id="resume-btn">Checkout my old protfolio</button>
+            </a>
           </div>
         </div>
       </div>

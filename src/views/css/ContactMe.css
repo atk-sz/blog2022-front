@@ -9,7 +9,9 @@
 }
 
 .contact-boby-top .contact-content {
-  margin: auto;
+  margin: 15vh auto auto auto;
+  display: flex;
+  flex-direction: column;
   padding-left: 30px;
   font-size: 27px;
   font-weight: bold;
