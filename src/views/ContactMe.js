@@ -6,7 +6,7 @@ import { FiFacebook } from "react-icons/fi";
 import { SiWhatsapp } from "react-icons/si";
 import { RiLinkedinFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
+
 import {
   AiFillGoogleCircle,
   AiOutlineInstagram,

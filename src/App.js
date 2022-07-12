@@ -9,7 +9,7 @@ const { Home, About, MyWork, ContactMe, Feedback, Thanks } = lazily(() =>
 
 const App = () => {
   return (
-    <Suspense fallback={<div className="col text-center p-5 h1">Zloading</div>}>
+    <Suspense fallback={<div className="col text-center p-5 h1">Loading..</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
