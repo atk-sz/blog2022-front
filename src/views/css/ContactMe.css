@@ -123,14 +123,14 @@
   margin: 30px;
   padding: 5px 30px;
   font-weight: 600;
-  color: #b9399e;
+  color: #5539b9;
   border: 1px solid white;
   border-radius: 5px;
   transition: .4s;
 }
 
 #resume-btn:hover {
-  background-color: #AE7BA3;
+  background-color: #847bae;
   border: 1px solid white;
   color: rgb(255, 255, 255);
 }

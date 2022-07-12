@@ -34,12 +34,12 @@
 
 .job-link {
   text-decoration: none;
-  color: rgb(209, 49, 49);
+  color: rgb(193, 209, 49);
   text-decoration: underline;
 }
 
 .job-link:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(68, 64, 64);
 }
 
 .work-highlight {

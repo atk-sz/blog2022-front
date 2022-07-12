@@ -52,8 +52,8 @@ export default function CheckoutForm({ clientSecret }) {
 
     const payload = await stripe.confirmPayment({
       elements,
-      confirmParams: { return_url: "https://syedzaid.co.in/" },
-      //   confirmParams: { return_url: "http://localhost:3000" },
+      // confirmParams: { return_url: "https://syedzaid.co.in/" },
+      confirmParams: { return_url: "http://localhost:3000/payment-success" },
     });
 
     if (

@@ -185,7 +185,7 @@ const Feedback = () => {
                   type="number"
                   name="amount"
                   id="amount"
-                  placeholder="Rs."
+                  placeholder="Rs. (amount)"
                   value={values1.amount}
                   onChange={handleChange1}
                   required
