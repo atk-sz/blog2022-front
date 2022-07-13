@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ThanksYou } from "../components";
 
 const Thanks = () => {
-  const [secs, setSecs] = useState(10);
+  const [secs, setSecs] = useState(5);
   const navigate = useNavigate();
 
   useEffect(() => {
