@@ -1,13 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Header.css";
+import { SideNav } from ".";
 
 const Header = () => {
-  const openNav = () => {
-    document.getElementById("mySidenav").style.width = "250px";
+  const handleStopPropOnSidenavDiv = (e) => {
+    e.stopPropagation();
   };
-  const closeNav = () => {
-    document.getElementById("mySidenav").style.width = "0";
+
+  const closeNav = (e) => {
+    e.stopPropagation();
+    const sideNav = document.querySelector(".sidenav");
+    if (sideNav) {
+      sideNav.style.width = "0px";
+    }
+  };
+  const openNav = (e) => {
+    e.stopPropagation();
+    const sideNav = document.querySelector(".sidenav");
+    if (sideNav) {
+      sideNav.style.width = "250px";
+    }
   };
 
   return (
@@ -23,9 +36,7 @@ const Header = () => {
         <div className="three-bar"></div>
       </nav>
       <Link to="/" style={{ textDecoration: "none" }} className="nav-link">
-        <p href="#home" className="home-logo">
-          Home
-        </p>
+        <p className="home-logo">Home</p>
       </Link>
       <ul className="navigation">
         <li>
@@ -65,26 +76,10 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <div id="mySidenav" className="sidenav">
-        <p className="closebtn" onClick={closeNav}>
-          &times;
-        </p>
-        <p className="to-close-nav home-logo" href="#home">
-          Home
-        </p>
-        <p className="to-close-nav" href="#about">
-          About me
-        </p>
-        <p className="to-close-nav" href="#mywork">
-          My Work
-        </p>
-        <p className="to-close-nav" href="#media">
-          Social Media
-        </p>
-        <p className="to-close-nav" href="#feedback">
-          Feedback
-        </p>
-      </div>
+      <SideNav
+        handleStopPropOnSidenavDiv={handleStopPropOnSidenavDiv}
+        closeNav={closeNav}
+      />
     </header>
   );
 };

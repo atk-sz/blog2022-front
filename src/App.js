@@ -7,9 +7,20 @@ const { Home, About, MyWork, ContactMe, Feedback, Thanks } = lazily(() =>
   import("./views")
 );
 
+// document.body.style = "background: #ededed;";
+const handleBodyClick = () => {
+  const sideNav = document.querySelector(".sidenav");
+  if (sideNav) {
+    sideNav.style.width = "0px";
+  }
+};
+document.body.addEventListener("click", handleBodyClick);
+
 const App = () => {
   return (
-    <Suspense fallback={<div className="col text-center p-5 h1">Loading..</div>}>
+    <Suspense
+      fallback={<div className="col text-center p-5 h1">Loading..</div>}
+    >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
