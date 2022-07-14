@@ -1,11 +1,11 @@
 import React from "react";
 import { Header } from "../components";
 import ContactLogo from "../assests/dp.png";
-import "./css/ContactMe.css";
 import { FiFacebook } from "react-icons/fi";
 import { SiWhatsapp } from "react-icons/si";
 import { RiLinkedinFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
+import "./css/ContactMe.css";
 
 import {
   AiFillGoogleCircle,
@@ -23,7 +23,6 @@ const ContactMe = () => {
             <img className="contact-img" src={ContactLogo} alt="Contact Logo" />
           </div>
           <div className="contact-content">
-            {/* <h1>Connect me on:</h1> */}
             <div className="social_media">
               <span
                 className="social-media-icon"
@@ -93,14 +92,16 @@ const ContactMe = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <button id="resume-btn">See my resume</button>
+              <button className="btns-contact">See my resume</button>
             </a>
             <a
               href="https://my-zblog.herokuapp.com/"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <button id="resume-btn">Checkout my old protfolio</button>
+              <button className="btns-contact">
+                Checkout my old protfolio
+              </button>
             </a>
           </div>
         </div>

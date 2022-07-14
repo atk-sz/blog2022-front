@@ -5,16 +5,15 @@
 .contact-boby-top {
   position: relative;
   display: flex;
-  justify-content: space-between;
 }
 
-.contact-boby-top .contact-content {
-  margin: 15vh auto auto auto;
-  display: flex;
-  flex-direction: column;
-  padding-left: 30px;
-  font-size: 27px;
-  font-weight: bold;
+.contact-boby-top .contact-img-div {
+  position: relative;
+  margin: 15vh auto;
+}
+
+.contact-boby-top .contact-img-div .contact-img {
+  width: 12em;
 }
 
 .contact-boby-top .contact-content * {
@@ -23,18 +22,12 @@
   text-align: start;
 }
 
-.contact-boby-top .contact-img-div {
-  position: relative;
-  margin: 3vh 7vw;
-  max-width: 26%;
-  max-height: 26%;
-  border: 6px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.contact-boby-top .contact-img-div .contact-img {
-  width: 100%;
+.contact-boby-top .contact-content {
+  margin: 15vh auto auto auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 27px;
+  font-weight: bold;
 }
 
 .contact-content .social_media .social-media-icon {
@@ -119,7 +112,7 @@
   color: #52A2F3;
 }
 
-#resume-btn {
+.contact-content .btns-contact {
   border: none;
   box-sizing: border-box;
   margin: 30px;
@@ -131,8 +124,191 @@
   transition: .4s;
 }
 
-#resume-btn:hover {
+.contact-content .btns-contact:hover {
   background-color: #847bae;
   border: 1px solid white;
   color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1180px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    width: 10em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    margin-top: 35px;
+    width: 8em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 21px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 4px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+
+  .contact-boby-top .contact-img-div .contact-img {
+    margin-top: 30px;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 19px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 3.5px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 35px;
+  }
+
+  .contact-content .btns-contact {
+    margin: 20px;
+    padding: 4px 25px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    width: 7em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 18px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 3.2px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 32px;
+  }
+
+  .contact-content .btns-contact {
+    margin: 19px;
+    padding: 3.8px 23px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    width: 6.5em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 16px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 3.2px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 28px;
+  }
+
+  .contact-content .btns-contact {
+    margin: 17px;
+    padding: 3.8px 23px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    margin-top: 3em;
+    width: 4em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 13px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 2.5px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 18px;
+  }
+
+  .contact-content .btns-contact {
+    margin: 10px;
+    padding: 3px 13px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .contact-boby-top .contact-img-div .contact-img {
+    margin-top: 3em;
+    width: 3em;
+  }
+
+  .contact-boby-top .contact-content {
+    font-size: 10px;
+  }
+
+  .contact-content .social_media .social-media-icon * {
+    padding: 2px;
+  }
+
+  #gmail-icon,
+  #whatsapp-icon,
+  #insta-icon,
+  #fb-icon,
+  #gt-icon,
+  #in-icon,
+  #tw-icon {
+    font-size: 15px;
+  }
+
+  .contact-content .btns-contact {
+    margin: 8px;
+    padding: 2px 10px;
+  }
 }
