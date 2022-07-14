@@ -1,14 +1,14 @@
 import axios from "axios";
 
 export const sendMail = async (values) => {
-  return await axios.post(`${process.env.REACT_APP_BACKEND_API1}/sendmail`, {
+  return await axios.post(`${process.env.REACT_APP_BACKEND_API}/sendmail`, {
     values,
   });
 };
 
 export const paymentIntent = async (values) => {
   return await axios.post(
-    `${process.env.REACT_APP_BACKEND_API1}/create-payment-intent`,
+    `${process.env.REACT_APP_BACKEND_API}/create-payment-intent`,
     {
       values,
     }
