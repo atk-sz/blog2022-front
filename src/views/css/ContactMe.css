@@ -255,8 +255,8 @@
 
 @media screen and (max-width: 455px) {
   .contact-boby-top .contact-img-div .contact-img {
-    margin-top: 3em;
-    width: 4em;
+    margin-top: 2.2em;
+    width: 5em;
   }
 
   .contact-boby-top .contact-content {
@@ -308,7 +308,7 @@
   }
 
   .contact-content .btns-contact {
-    margin: 8px;
-    padding: 2px 10px;
+    margin: 3px;
+    padding: 2px 9px;
   }
 }
