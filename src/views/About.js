@@ -12,7 +12,7 @@ const About = () => {
 
   const ageCal = () => {
     var dob = new Date("10/22/1998");
-    var month_diff = new Date("10/21/2022") - dob.getTime();
+    var month_diff = new Date() - dob.getTime();
     var age_dt = new Date(month_diff);
     var year = age_dt.getUTCFullYear();
     var age = Math.abs(year - 1970);

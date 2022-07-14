@@ -9,9 +9,6 @@ const MyWork = () => {
       <Header />
       <div className="work-body">
         <div className="work-boby-top">
-          <div className="work-img-div">
-            <img className="work-img" src={WorkLogo} alt="Work Logo" />
-          </div>
           <div className="work-content">
             <h2>Professional Experience</h2>
             <p>
@@ -51,6 +48,9 @@ const MyWork = () => {
               technologies such as HDFS, Ambari Cluster, Spark, Scala, Hive &
               much more.
             </p>
+          </div>
+          <div className="work-img-div">
+            <img className="work-img" src={WorkLogo} alt="Work Logo" />
           </div>
         </div>
       </div>
