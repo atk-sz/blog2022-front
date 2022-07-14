@@ -6,13 +6,13 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import "./css/Feedback.css";
 
-// const stripePromise = loadStripe(
-//   "pk_test_51JSxa3SJaRCuuRqyHvVOa3avYyZqFOO8uTadYNNUX4oUTd5HltOdxIr7Y4yPstcsXBD3Fip4nUPKgwyFIGHWEnMJ00rrvB2jbg"
-// );
-
 const stripePromise = loadStripe(
-  "pk_live_51JSxa3SJaRCuuRqy28ps5iWYmM1ThF15anymzB1xqLwuipqbURxv8Bhj1yshu9vWwcCtpWIMkNn1WaDc5na2npaz00p8RqNrZK"
+  "pk_test_51JSxa3SJaRCuuRqyHvVOa3avYyZqFOO8uTadYNNUX4oUTd5HltOdxIr7Y4yPstcsXBD3Fip4nUPKgwyFIGHWEnMJ00rrvB2jbg"
 );
+
+// const stripePromise = loadStripe(
+//   "pk_live_51JSxa3SJaRCuuRqy28ps5iWYmM1ThF15anymzB1xqLwuipqbURxv8Bhj1yshu9vWwcCtpWIMkNn1WaDc5na2npaz00p8RqNrZK"
+// );
 
 const Feedback = () => {
   const initialValues = { name: "", email: "", message: "" };
@@ -75,6 +75,11 @@ const Feedback = () => {
       });
   };
 
+  const goBack = () => {
+    setCardMode(false);
+    setClientSecret("");
+  };
+
   const appearance = {
     theme: "stripe",
   };
@@ -120,7 +125,7 @@ const Feedback = () => {
               disabled={mailDisable}
               required
             ></textarea>
-            <button id="submit" type="submit" disabled={mailDisable}>
+            <button id="amount-submit" type="submit" disabled={mailDisable}>
               SEND MESSAGE
             </button>
             <div className="onsubmit">
@@ -146,7 +151,7 @@ const Feedback = () => {
         </div>
         <div className="card-payment-div">
           {cardMode ? (
-            <div className="card-payment-from-div">
+            <div className="card-payment-form-div">
               {loading ? (
                 <h1>loading...</h1>
               ) : (
@@ -156,6 +161,7 @@ const Feedback = () => {
                       <CheckoutForm
                         clientSecret={clientSecret}
                         setClientSecret={setClientSecret}
+                        goBack={goBack}
                       />
                     </Elements>
                   )}
@@ -164,8 +170,8 @@ const Feedback = () => {
             </div>
           ) : (
             <>
-              <h4>You can can also donate via card</h4>
-              <form onSubmit={handleAmountSub}>
+              <h3>Donate via card</h3>
+              <form className="amount-form" onSubmit={handleAmountSub}>
                 <input
                   type="text"
                   name="fname"

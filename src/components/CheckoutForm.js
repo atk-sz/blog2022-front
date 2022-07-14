@@ -1,83 +1,89 @@
-import React, { useEffect, useState } from "react";
-import {
-  PaymentElement,
-  useStripe,
-  useElements,
-} from "@stripe/react-stripe-js";
+import React, { useState } from "react";
+import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import "./css/CheckoutForm.css";
+import ThankYou from "./ThankYou";
 
-export default function CheckoutForm({ clientSecret }) {
+const CheckoutForm = ({ clientSecret, goBack }) => {
+  const [succeeded, setSucceeded] = useState(false);
+  const [error, setError] = useState(null);
+  const [processing, setProcessing] = useState("");
+  const [disabled, setDisabled] = useState(true);
   const stripe = useStripe();
   const elements = useElements();
 
-  const [message, setMessage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const handleChange = async (event) => {
+    setDisabled(event.empty);
+    setError(event.error ? event.error.message : "");
+  };
 
-  useEffect(() => {
-    if (!stripe) {
-      return;
-    }
-
-    if (!clientSecret) {
-      return;
-    }
-
-    stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-      switch (paymentIntent.status) {
-        case "succeeded":
-          setMessage("Payment succeeded!");
-          break;
-        case "processing":
-          setMessage("Your payment is processing.");
-          break;
-        case "requires_payment_method":
-          setMessage("Please enter card details.");
-          break;
-        default:
-          setMessage("Something went wrong.");
-          break;
-      }
-    });
-  }, [stripe, clientSecret]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!stripe || !elements) {
-      // Stripe.js has not yet loaded.
-      // Make sure to disable form submission until Stripe.js has loaded.
-      return;
-    }
-
-    setIsLoading(true);
-
-    const payload = await stripe.confirmPayment({
-      elements,
-      confirmParams: { return_url: "https://syedzaid.co.in/payment-success" },
-      // confirmParams: { return_url: "http://localhost:3000/payment-success" },
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+    setProcessing(true);
+    setDisabled(true);
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
     });
 
-    if (
-      payload.error.type === "card_error" ||
-      payload.error.type === "validation_error"
-    ) {
-      setMessage(payload.error.message);
+    if (payload.error) {
+      setError(`Payment failed ${payload.error.message}`);
+      setProcessing(false);
+      setDisabled(false);
     } else {
-      setMessage("An unexpected error occurred.");
+      console.log("Payment success");
+      setError(null);
+      setProcessing(false);
+      setSucceeded(true);
     }
-
-    setIsLoading(false);
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement id="payment-element" />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-        </span>
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
-    </form>
+    <div className="payment-fix-div">
+      {succeeded && (
+        <div className="payment-success-message">
+          <ThankYou />
+        </div>
+      )}
+      <div className="back-arrow-payment">
+        <p onClick={goBack}>
+          <IoMdArrowRoundBack id="back-payment" />
+        </p>
+      </div>
+      <form className="payment-form" onSubmit={handleSubmit}>
+        <CardElement id="card-element" onChange={handleChange} />
+        <button
+          disabled={processing || disabled || succeeded}
+          id="payment-submit"
+        >
+          <span id="button-text">
+            {processing ? (
+              <div className="spinner" id="spinner"></div>
+            ) : (
+              "Pay now"
+            )}
+          </span>
+        </button>
+        {/* Show any error that happens when processing the payment */}
+        {error && (
+          <h5 className="card-error" role="alert">
+            {error}
+          </h5>
+        )}
+        {/* Show a success message upon completion */}
+        {/* <p className={succeeded ? "result-message" : "result-message hidden"}>
+              Payment succeeded, see the result in your
+              <a
+              href={`https://dashboard.stripe.com/test/payments`}
+              >
+              {" "}
+              Stripe dashboard.
+              </a> Refresh the page to pay again.
+            </p> */}
+      </form>
+    </div>
   );
-}
+};
+
+export default CheckoutForm;
