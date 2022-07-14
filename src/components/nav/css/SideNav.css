@@ -47,18 +47,8 @@
 }
 
 /* ------------------- */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 951px) {
     .sidenav {
         display: none;
-    }
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav p {
-        font-size: 18px;
     }
 }

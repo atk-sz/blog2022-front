@@ -1,26 +1,7 @@
 .about-body {
-    margin: 25vh 10vw auto 10vw;
+    margin: 25vh 7vw auto 7vw;
     display: flex;
     justify-content: space-between;
-}
-
-.about-body .about-content {
-    margin: auto;
-    padding-right: 30px;
-    flex: 3;
-    font-size: 34px;
-    font-weight: bold;
-}
-
-.about-body .about-content * {
-    font-family: 'Edu SA Beginner', cursive;
-    margin: auto;
-}
-
-.about-body .about-content .friends-em {
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
-    letter-spacing: 5px;
 }
 
 .about-body .about-img-div {
@@ -31,4 +12,77 @@
 
 .about-body .about-img-div .about-img {
     width: 100%;
+}
+
+.about-body .about-content * {
+    font-family: 'Edu SA Beginner', cursive;
+    margin: auto;
+}
+
+.about-body .about-content {
+    margin: auto;
+    padding-left: 40px;
+    flex: 3;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.about-body .about-content .friends-em {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+    .about-body {
+        margin: 25vh 8vw auto 8vw;
+    }
+
+    .about-body .about-content {
+        font-size: 1.6em;
+        flex: 1;
+    }
+
+    .about-body .about-content .friends-em {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .about-body .about-img-div {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about-body {
+        margin: 5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-body .about-content {
+        font-size: 2em;
+        padding: 0;
+        margin-top: 2em;
+    }
+
+    .about-body .about-content .friends-em {
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .about-body {
+        margin: 70px 50px;
+    }
+
+    .about-body .about-content {
+        font-size: 1em;
+    }
+
+    .about-body .about-content .friends-em {
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
 }

@@ -4,7 +4,7 @@ import { Header } from "../components";
 import AboutLogo from "../assests/svgs/about.svg";
 
 const About = () => {
-  let [age, setAge] = useState(0);
+  const [age, setAge] = useState(0);
 
   useEffect(() => {
     ageCal();
@@ -23,6 +23,9 @@ const About = () => {
     <div id="about">
       <Header />
       <div className="about-body">
+        <div className="about-img-div">
+          <img className="about-img" src={AboutLogo} alt="About Logo" />
+        </div>
         <div className="about-content">
           <p>
             Hello to all my readers, I am from Bangalore, {age} years old,
@@ -43,9 +46,6 @@ const About = () => {
             people with their psychological issues and last but not least I am a
             crazy-ass fan of The Show FRIENDS
           </p>
-        </div>
-        <div className="about-img-div">
-          <img className="about-img" src={AboutLogo} alt="About Logo" />
         </div>
       </div>
     </div>
