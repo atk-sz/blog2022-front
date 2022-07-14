@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./css/SideNav.css";
 import { Link } from "react-router-dom";
+import "./css/SideNav.css";
 
 const SideNav = ({ handleStopPropOnSidenavDiv, closeNav }) => {
   const [active, setAcitve] = useState(null);
