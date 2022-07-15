@@ -2,11 +2,11 @@
     height: 40px;
     padding: 10px 12px;
     width: 100%;
+    min-width: 250px;
     color: #32325d;
     background-color: white;
     border: 1px solid transparent;
     border-radius: 4px;
-
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
@@ -108,13 +108,14 @@
 .card-error {
     position: absolute;
     margin: 5px;
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
+    text-transform: uppercase;
     color: rgba(255, 0, 0, 0.596);
 }
 
 .back-arrow-payment p {
-    margin-left: -5px;
+    margin: 5px -5px;
     text-align: start;
     cursor: pointer;
 }
@@ -131,7 +132,7 @@
     float: right;
     width: 100px;
     padding: none;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .payment-success-message {
@@ -140,4 +141,22 @@
     top: 0;
     z-index: 3;
     background-color: #ffffff3a;
+}
+
+@media screen and (max-width:950px) {
+    .payment-form {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .payment-form {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .payment-form {
+        width: 250px;
+    }
 }
