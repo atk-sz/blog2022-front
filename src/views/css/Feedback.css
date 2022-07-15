@@ -74,7 +74,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   padding: 2px;
   width: 100%;
-  color: rgba(17, 17, 34, 0.603);
+  color: rgba(0, 0, 0, 0.589);
 }
 
 .feedback-body .onsubmit h4#email-success {
@@ -125,4 +125,174 @@ input[type=number]::-webkit-outer-spin-button {
 .card-payment-form-div {
   width: 20vw;
   position: relative;
+}
+
+@media screen and (max-width:1300px) {
+  .feedback {
+    margin: 20vh 4vw 15vh 4vw;
+    height: 65vh;
+  }
+
+  .feedback-body .feedback-form {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .feedback-body input,
+  .feedback-body textarea,
+  .feedback-body button {
+    width: 250px;
+  }
+
+  .feedback-body input {
+    height: 50px;
+  }
+
+  .feedback-body .thank-you-div {
+    max-width: 300px;
+  }
+
+  .feedback-body .thank-you-div .upi-img {
+    max-width: 180px;
+  }
+
+  .card-payment-div {
+    /* border: 2px solid #112; */
+    width: 250px;
+    height: 45vh;
+    transition: .5s;
+  }
+
+  .amount-form input,
+  .amount-form .card-next-btn {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .feedback {
+    margin: 20vh auto;
+  }
+
+  .feedback-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .feedback-body .feedback-form {
+    max-width: 420px;
+  }
+
+  .feedback-body input,
+  .feedback-body textarea,
+  .feedback-body button {
+    width: 400px;
+  }
+
+  .feedback-body input,
+  .feedback-body button {
+    height: 60px;
+  }
+
+  .feedback-body .thank-you-div {
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto;
+  }
+
+  .feedback-body .thank-you-div .upi-img {
+    max-width: 230px;
+  }
+
+  .card-payment-div {
+    position: relative;
+    width: 400px;
+    transition: .5s;
+    margin-bottom: 30px;
+  }
+
+  .amount-form input,
+  .amount-form .card-next-btn {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:460px) {
+  .feedback {
+    margin: 10vh auto;
+  }
+
+  .feedback-body .feedback-form {
+    max-width: 270px;
+  }
+
+  .feedback-body input,
+  .feedback-body textarea,
+  .feedback-body button {
+    width: 300px;
+  }
+
+  .feedback-body input,
+  .feedback-body button {
+    height: 40px;
+  }
+
+  .feedback-body .thank-you-div {
+    max-width: 300px;
+    margin: 45px auto;
+  }
+
+  .feedback-body .thank-you-div .upi-img {
+    width: 180px;
+  }
+
+  .card-payment-div {
+    width: 300px;
+  }
+
+  .amount-form input,
+  .amount-form .card-next-btn {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .feedback {
+    margin: 10vh auto;
+  }
+
+  .feedback-body .feedback-form {
+    max-width: 270px;
+  }
+
+  .feedback-body input,
+  .feedback-body textarea,
+  .feedback-body button {
+    width: 250px;
+  }
+
+  .feedback-body input,
+  .feedback-body button {
+    height: 40px;
+  }
+
+  .feedback-body .thank-you-div {
+    max-width: 250px;
+    margin: 45px auto 10px auto;
+  }
+
+  .feedback-body .thank-you-div .upi-img {
+    width: 150px;
+  }
+
+  .card-payment-div {
+    width: 250px;
+  }
+
+  .amount-form input,
+  .amount-form .card-next-btn {
+    width: 250px;
+  }
 }
