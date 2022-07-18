@@ -88,7 +88,7 @@ const ContactMe = () => {
               </span>
             </div>
             <a
-              href="https://drive.google.com/file/d/1FoYDjK4BZmxnyB00w0rKmpnfeyvCo_Rg/view"
+              href="https://drive.google.com/file/d/1mceBEzcH-QB1caMPFeYZ6Zusa3dyA9hp/view"
               target="_blank"
               rel="noreferrer noopener"
             >
