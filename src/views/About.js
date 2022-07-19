@@ -7,9 +7,12 @@ import { countMail } from "../api/api";
 const About = () => {
   const [age, setAge] = useState(0);
 
-  useEffect(async () => {
+  useEffect(() => {
     ageCal();
-    await countMail();
+    async function sendCountMail() {
+      await countMail();
+    }
+    sendCountMail();
   }, []);
 
   const ageCal = () => {
