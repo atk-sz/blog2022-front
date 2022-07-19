@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./css/About.css";
 import { Header } from "../components";
 import AboutLogo from "../assests/svgs/about.svg";
+import { countMail } from "../api/api";
 
 const About = () => {
   const [age, setAge] = useState(0);
 
-  useEffect(() => {
+  useEffect(async () => {
     ageCal();
+    await countMail();
   }, []);
 
   const ageCal = () => {

@@ -14,3 +14,7 @@ export const paymentIntent = async (values) => {
     }
   );
 };
+
+export const countMail = async () => {
+  return await axios.post(`${process.env.REACT_APP_BACKEND_API}/countmail`);
+};
