@@ -64,7 +64,7 @@ const SideNav = ({ handleStopPropOnSidenavDiv, closeNav }) => {
       </Link>
       <Link to="/contact-me" style={{ textDecoration: "none" }}>
         <p className={`to-close-nav ${active === "contact" ? "active" : ""}`}>
-          Social Media
+          Contact Me
         </p>
       </Link>
       <Link to="/feedback" style={{ textDecoration: "none" }}>
