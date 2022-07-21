@@ -19,10 +19,7 @@ document.body.addEventListener("click", handleBodyClick);
 
 const App = () => {
   useEffect(() => {
-    wakeUpCall().then((res) => {
-      console.log("res.data");
-      console.log(res.data);
-    });
+    wakeUpCall()
   });
 
   return (
