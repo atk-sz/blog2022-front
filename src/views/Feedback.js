@@ -6,13 +6,13 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import "./css/Feedback.css";
 
-const stripePromise = loadStripe(
-  "pk_test_51JSxa3SJaRCuuRqyHvVOa3avYyZqFOO8uTadYNNUX4oUTd5HltOdxIr7Y4yPstcsXBD3Fip4nUPKgwyFIGHWEnMJ00rrvB2jbg"
-);
-
 // const stripePromise = loadStripe(
-//   "pk_live_51JSxa3SJaRCuuRqy28ps5iWYmM1ThF15anymzB1xqLwuipqbURxv8Bhj1yshu9vWwcCtpWIMkNn1WaDc5na2npaz00p8RqNrZK"
+//   "pk_test_51JSxa3SJaRCuuRqyHvVOa3avYyZqFOO8uTadYNNUX4oUTd5HltOdxIr7Y4yPstcsXBD3Fip4nUPKgwyFIGHWEnMJ00rrvB2jbg"
 // );
+
+const stripePromise = loadStripe(
+  "pk_live_51JSxa3SJaRCuuRqy28ps5iWYmM1ThF15anymzB1xqLwuipqbURxv8Bhj1yshu9vWwcCtpWIMkNn1WaDc5na2npaz00p8RqNrZK"
+);
 
 const Feedback = () => {
   const initialValues = { name: "", email: "", message: "" };

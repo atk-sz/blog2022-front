@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { lazily } from "react-lazily";
 import "./App.css";
+import { wakeUpCall } from "./api/api";
 
 const { Home, About, MyWork, ContactMe, Feedback } = lazily(() =>
   import("./views")
@@ -17,6 +18,13 @@ const handleBodyClick = () => {
 document.body.addEventListener("click", handleBodyClick);
 
 const App = () => {
+  useEffect(() => {
+    wakeUpCall().then((res) => {
+      console.log("res.data");
+      console.log(res.data);
+    });
+  });
+
   return (
     <Suspense
       fallback={<div className="col text-center p-5 h1">Loading..</div>}

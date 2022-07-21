@@ -1,5 +1,9 @@
 import axios from "axios";
 
+export const wakeUpCall = async () => {
+  return await axios.get(`${process.env.REACT_APP_BACKEND_API}/wake-up-call`);
+};
+
 export const sendMail = async (values) => {
   return await axios.post(`${process.env.REACT_APP_BACKEND_API}/sendmail`, {
     values,
