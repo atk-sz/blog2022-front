@@ -16,7 +16,7 @@
 }
 
 .work-boby-top .work-content * {
-  font-family: 'Edu SA Beginner', cursive;
+  font-family: "Edu SA Beginner", cursive;
   margin: auto;
   text-align: start;
 }
@@ -46,6 +46,15 @@
   text-decoration: underline;
 }
 
+.work-body .work-content .exp-arrow {
+  float: right;
+  cursor: pointer;
+}
+
+.work-body .work-content .exp-arrow:hover {
+  color: white;
+}
+
 .work-boby-top .work-img-div {
   margin: auto;
   position: relative;
@@ -71,7 +80,6 @@
   .work-boby-top .work-img-div {
     flex: 1;
   }
-
 }
 
 @media screen and (max-width: 950px) {
@@ -131,12 +139,12 @@
 
 @media screen and (max-width: 300px) {
   .work-boby-top .work-content {
-    font-size: .6em;
+    font-size: 0.6em;
     margin-bottom: 30px;
   }
 
   .work-boby-top .work-content h2 {
-    font-size: .8em;
+    font-size: 0.8em;
     margin-bottom: 6px;
   }
 }
