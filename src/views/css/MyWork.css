@@ -65,6 +65,19 @@
   width: 100%;
 }
 
+.fadeOut {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.fadeIn {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
 @media screen and (max-width: 1300px) {
   .work-boby-top .work-content {
     font-size: 24px;
