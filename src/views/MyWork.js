@@ -5,12 +5,12 @@ import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 import "./css/MyWork.css";
 import { useEffect } from "react";
 
-const WebCannonZExp = ({ setPeriod }) => {
+const WebCannonZExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Mar2021 - Nov2021");
   }, []);
   return (
-    <p>
+    <p className={dispCount == 2 ? "fadeIn" : "fadeOut"}>
       Worked as a <span className="role-bold">Full Stack Developer</span> at a
       start-up{" "}
       <a
@@ -30,12 +30,12 @@ const WebCannonZExp = ({ setPeriod }) => {
   );
 };
 
-const HitachiExp = ({ setPeriod }) => {
+const HitachiExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Dec2021 - July2022");
   }, []);
   return (
-    <p>
+    <p className={dispCount == 1 ? "fadeIn" : "fadeOut"}>
       Worked as a <span className="role-bold">Big Data Engineer</span> at{" "}
       <a
         className="job-link"
@@ -53,12 +53,12 @@ const HitachiExp = ({ setPeriod }) => {
   );
 };
 
-const CurrentExp = ({ setPeriod }) => {
+const CurrentExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Aug2022 - Current");
   }, []);
   return (
-    <p>
+    <p className={dispCount == 0 ? "fadeIn" : "fadeOut"}>
       Working as a <span className="role-bold">Software Engineer</span> at{" "}
       <a
         className="job-link"
@@ -150,9 +150,11 @@ const MyWork = () => {
             <hr style={{ marginBottom: "20px" }} />
             {
               {
-                0: <CurrentExp setPeriod={setPeriod} />,
-                1: <HitachiExp setPeriod={setPeriod} />,
-                2: <WebCannonZExp setPeriod={setPeriod} />,
+                0: <CurrentExp setPeriod={setPeriod} dispCount={dispCount} />,
+                1: <HitachiExp setPeriod={setPeriod} dispCount={dispCount} />,
+                2: (
+                  <WebCannonZExp setPeriod={setPeriod} dispCount={dispCount} />
+                ),
               }[dispCount]
             }
           </div>
