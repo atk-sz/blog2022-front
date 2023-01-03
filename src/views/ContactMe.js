@@ -95,7 +95,8 @@ const ContactMe = () => {
               <button className="btns-contact">See my resume</button>
             </a>
             <a
-              href="https://my-zblog.herokuapp.com/"
+              href="https://lime-excited-cockatoo.cyclic.app/"
+              // href="https://my-zblog.herokuapp.com/"
               target="_blank"
               rel="noreferrer noopener"
             >
