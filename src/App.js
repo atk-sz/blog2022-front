@@ -18,9 +18,9 @@ const handleBodyClick = () => {
 document.body.addEventListener("click", handleBodyClick);
 
 const App = () => {
-  useEffect(() => {
-    wakeUpCall()
-  });
+  // useEffect(() => {
+  //   wakeUpCall()
+  // });
 
   return (
     <Suspense
