@@ -8,9 +8,9 @@ import { useEffect } from "react";
 const WebCannonZExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Mar2021 - Nov2021");
-  }, []);
+  }, [setPeriod]);
   return (
-    <p className={dispCount == 2 ? "fadeIn" : "fadeOut"}>
+    <p className={dispCount === 2 ? "fadeIn" : "fadeOut"}>
       Worked as a <span className="role-bold">Full Stack Developer</span> at a
       start-up{" "}
       <a
@@ -26,6 +26,8 @@ const WebCannonZExp = ({ setPeriod, dispCount }) => {
       <span className="work-highlight">react native & expo</span> to work on
       native applications. Applications such as eCommerce sites and simple ERP
       apps.
+      {/* Also managed a team of interns & passed on technology knowledge
+      through trainings */}
     </p>
   );
 };
@@ -33,9 +35,9 @@ const WebCannonZExp = ({ setPeriod, dispCount }) => {
 const HitachiExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Dec2021 - July2022");
-  }, []);
+  }, [setPeriod]);
   return (
-    <p className={dispCount == 1 ? "fadeIn" : "fadeOut"}>
+    <p className={dispCount === 1 ? "fadeIn" : "fadeOut"}>
       Worked as a <span className="role-bold">Big Data Engineer</span> at{" "}
       <a
         className="job-link"
@@ -56,9 +58,9 @@ const HitachiExp = ({ setPeriod, dispCount }) => {
 const CurrentExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {
     setPeriod("Aug2022 - Current");
-  }, []);
+  }, [setPeriod]);
   return (
-    <p className={dispCount == 0 ? "fadeIn" : "fadeOut"}>
+    <p className={dispCount === 0 ? "fadeIn" : "fadeOut"}>
       Working as a <span className="role-bold">Software Engineer</span> at{" "}
       <a
         className="job-link"
@@ -69,12 +71,14 @@ const CurrentExp = ({ setPeriod, dispCount }) => {
         Kerv Digital
       </a>
       . Here I am a <span className="work-highlight">product developer</span>,
-      working with dotnet(C#) in back-end & React in front-end. Kerv Digital
+      working with dotnet(C#) in back-end & React in front-end.
+      {/* Kerv Digital
       (former CloudThing India) is a multi-national software development company
-      that majorly works on CRM projects for other MNC's. Here i got a good
-      exposure to microsoft power plateform with which one can create & maintain
-      low-code applications that are mainly used by companies for thier back-end
-      processes.
+      that majorly works on CRM projects for other MNC's. */}{" "}
+      Also i got a good exposure to microsoft power plateform(dynamics-365) with
+      which one can create & maintain low-code applications.
+      {/* that are mainly used by companies
+      for thier back-end processes. */}
     </p>
   );
 };
@@ -83,16 +87,6 @@ const MyWork = () => {
   const [period, setPeriod] = useState("Aug 2022 - Current");
   const [dispCount, setDispCount] = useState(0);
   const [timeouts, setTimeouts] = useState([]);
-
-  useEffect(() => {
-    if (dispCount < 2) timeouts.push(setTimeout(increamentCounter, 7000));
-    else timeouts.push(setTimeout(reinitializeCounter, 7000));
-  }, [dispCount]);
-
-  const clearTimeOuts = () => {
-    for (var i = 0; i < timeouts.length; i++) clearTimeout(timeouts[i]);
-    setTimeouts([]);
-  };
 
   const increamentCounter = () => {
     setDispCount((dispCount) => dispCount + 1);
@@ -109,6 +103,16 @@ const MyWork = () => {
     clearTimeOuts();
   };
 
+  // useEffect(() => {
+  //   if (dispCount < 2) timeouts.push(setTimeout(increamentCounter, 10000));
+  //   else timeouts.push(setTimeout(reinitializeCounter, 10000));
+  // }, [dispCount, increamentCounter, reinitializeCounter]);
+
+  const clearTimeOuts = () => {
+    for (var i = 0; i < timeouts.length; i++) clearTimeout(timeouts[i]);
+    setTimeouts([]);
+  };
+
   const nextExp = () => {
     if (dispCount < 2) increamentCounter();
     else reinitializeCounter();
@@ -121,9 +125,6 @@ const MyWork = () => {
   };
 
   if (dispCount < 0 || dispCount > 2) setDispCount(0);
-
-  // console.log("timeouts");
-  // console.log(timeouts);
 
   return (
     <div className="my-work">
