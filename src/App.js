@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 import { lazily } from "react-lazily";
 import "./App.css";
-import { wakeUpCall } from "./api/api";
 
 const { Home, About, MyWork, ContactMe, Feedback } = lazily(() =>
   import("./views")
