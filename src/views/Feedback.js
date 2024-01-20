@@ -145,7 +145,8 @@ const Feedback = () => {
           </p>
           <img
             className="upi-img"
-            src="https://res.cloudinary.com/zaid/image/upload/v1606458146/Myblog-1/QR_iicqlj.jpg"
+            // src="https://res.cloudinary.com/zaid/image/upload/v1606458146/Myblog-1/QR_iicqlj.jpg"
+            src="https://res.cloudinary.com/zaid/image/upload/f_auto,q_auto/v1/Myblog-1/QRCode"
             alt=""
           />
         </div>
