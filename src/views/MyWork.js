@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Header } from "../components";
 import WorkLogo from "../assests/svgs/feeling_proud.svg";
 import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
-import "./css/MyWork.css";
 import { useEffect } from "react";
+import "./css/MyWork.css";
 
 const WebCannonZExp = ({ setPeriod, dispCount }) => {
   useEffect(() => {

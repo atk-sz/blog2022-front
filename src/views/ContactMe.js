@@ -88,15 +88,14 @@ const ContactMe = () => {
               </span>
             </div>
             <a
-              href="https://drive.google.com/file/d/1LDEJxnN6wsKZMRI3p4v944WYOLWBcoNR/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xFWuEhHJzPTV5OSSIQlmYfX6VH_m1RoC/view?usp=sharing"
               target="_blank"
               rel="noreferrer noopener"
             >
               <button className="btns-contact">See my resume</button>
             </a>
             <a
-              href="https://lime-excited-cockatoo.cyclic.app/"
-              // href="https://my-zblog.herokuapp.com/"
+              href="https://my-zblog.onrender.com/"
               target="_blank"
               rel="noreferrer noopener"
             >
