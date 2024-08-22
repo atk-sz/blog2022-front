@@ -1,11 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
-import { lazily } from "react-lazily";
+import { Home, About, MyWork, ContactMe, Feedback } from "./views";
 import "./App.css";
-
-const { Home, About, MyWork, ContactMe, Feedback } = lazily(() =>
-  import("./views")
-);
 
 // document.body.style = "background: #ededed;";
 const handleBodyClick = () => {
